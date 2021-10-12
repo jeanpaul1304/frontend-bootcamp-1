@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Bootcamp Javascript</title>
+</head>
+<body>
+     <!-- <thead class="thead-light"></thead> -->
+     <table class="table table-dark" id="data_table">
+        <thead class="thead-dark">
+          <tr>
+           
+            <th scope="col">Nombre</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Indice</th>
+            <th scope="col">Acciones</th>
+
+          </tr>
+        </thead>
+        <tbody>
+         
+       </tbody>
+      </table>
+    <div class="col-md-12" align="center">
+        <form id="form_id">
+
+            <div class="form-group col-md-4" > 
+                <label for="full_name_id" class="control-label">Nombres</label>
+                <input type="text" class="form-control" id="full_name_id" required placeholder="Nombres">
+            </div>    
+        
+            <div class="form-group col-md-4" > 
+                <label for="full_last_name_id" class="control-label">Apellidos</label>
+                <input type="text" class="form-control" id="full_last_name_id"  required placeholder="Apellidos">
+            </div>                    
+                                    
+            <div class="form-group col-md-4" > 
+                <label for="age_id" class="control-label">Edad</label>
+                <input type="number" class="form-control" id="age_id" required placeholder="Edad">
+            </div>                                                
+            <div class="form-group col-md-4" >  
+                <label for="specialty_id" class="control-label">Especialidad</label>
+                <select class="form-control" id="specialty_id">
+                    <option value="3">Matematica (3 unidades)</option>
+                    <option value="4">Programación (4 unidades)</option>
+                    <option value="3">Programación (4 unidades)</option>
+                    <option value="3">Arte (3 unidades)</option>
+                    <option value="2">Química (2 unidades)</option>
+                </select>                    
+            </div>
+            
+            <div class="form-group col-md-4" > 
+                <label for="years_exp_id" class="control-label">Años de experiencia</label>
+                <input type="text" class="form-control" id="years_exp_id" required placeholder="Años de experiencia">
+            </div>        
+            <div class="form-group col-md-4" > 
+                <label for="url_id" class="control-label">Linkeding</label>
+                <input type="text" class="form-control" id="url_id"  placeholder="URL de Linkeding">
+            </div>  
+            <td><input type="hidden"class="form-control"  id="index" ></td>
+            <div class="form-group col-md-4" > 
+                <button type="submit" class="btn btn-primary"  onclick="save_data();">Guardar</button>
+            </div>     
+            
+        </form>
+
+    </div>
+    
+ 
+      
+     
+      <!-- archivo de trabajo practico -->
+      <script src="test.js"></script>
+
+      <!-- bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
