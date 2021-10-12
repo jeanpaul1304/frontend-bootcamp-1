@@ -63,7 +63,7 @@
             padding: 4px;
         }
 
-        #btnView {
+        #btnMas {
             font-family: arial, sans-serif;
             width: 100%;
             text-align: center;
@@ -71,7 +71,7 @@
             padding: 4px;
         }
 
-        #btnEdit {
+        #btnMenos {
             font-family: arial, sans-serif;
             width: 100%;
             text-align: center;
@@ -84,6 +84,14 @@
             width: 100%;
             text-align: center;
             background-color: #d12a10;
+            padding: 4px;
+        }
+
+        #btnEnviar {
+            font-family: arial, sans-serif;
+            width: 100%;
+            text-align: center;
+            background-color: #4fc812;
             padding: 4px;
         }
     </style>
@@ -103,7 +111,7 @@
             <tr>    
                 <th>APELLIDOS:</th>
                 <td>
-                    <input type="text" name="Apellidos" id="txtNombres" value="" />
+                    <input type="text" name="Apellidos" id="txtApellidos" value="" />
                 </td>
             </tr>
             <tr>
@@ -116,11 +124,11 @@
                 <th>ESPECIALIDAD:</th>
                 <td>
                     <select id="cbxEspecialidad" name="Especialidad">
-                        <option value="3">Matemàtica</option>
-                        <option value="4">Programaciòn</option>
-                        <option value="3">Fìsica</option>
-                        <option value="3">Arte</option>
-                        <option value="2">Quìmica</option>
+                        <option value="Matemàtica">Matemàtica</option>
+                        <option value="Programaciòn">Programaciòn</option>
+                        <option value="Fìsica">Fìsica</option>
+                        <option value="Arte">Arte</option>
+                        <option value="Quìmica">Quìmica</option>
                       </select>
                 </td>
             </tr>
@@ -138,11 +146,11 @@
             </tr>
             <tr>
                 <td>
-                    <button type='button' id='btnAdd' onclick="addRow()"><b>AÑADIR</b></button>
-                    <button type='button' id='btnUpdate' style="display: none;" onclick="actionUpdate()"><b>ACTUALIZAR</b></button>
+                    <button type='button' id='btnAdd' onclick="agregarFila()"><b>AÑADIR</b></button>
+                    <button type='button' id='btnUpdate' style="display: none;" ><b>ACTUALIZAR</b></button>
                 </td>
                 <td>
-                    <button type='button' id='btnClear' onclick = "actionClear()"><b>LIMPIAR</b></button>
+                    <button type='button' id='btnClear' onclick = "limpiarCampos()"><b>LIMPIAR</b></button>
                 </td>
             </tr>
         </table>
@@ -153,13 +161,10 @@
     <div>
         <table border="1" class="table" id="tblData">
             <tr>
+                <th>ÌNDICE</th>
                 <th>NOMBRES</th>
-                <th>APELLIDOS</th>
-                <th>EDAD</th>
                 <th>ESPECIALIDAD</th>
-                <th>AÑOS EXPERIENCIA</th>
-                <th>URL LINKEDIN</th>
-                <th colspan="3">ACCIONES</th>
+                <th colspan="4">ACCIONES</th>
             </tr>
         </table>
     </div>
