@@ -14,8 +14,9 @@ function agregarFila() {
     experiencia     = document.getElementById("txtExperiencia").value;
     url             = document.getElementById("txtUrl").value;
 
+    
     var indice = 0;
-
+    
     switch (especialidad) {
         case "Matemàtica":
             indice = experiencia * 3;
@@ -38,6 +39,10 @@ function agregarFila() {
             break;
     }
     
+    if(url != ""){
+        indice = indice + 10;
+    }  
+
     if (nombres == "" || apellidos == "" || edad == "" || especialidad == "" || experiencia == "") {
         alert("Llenar campos requeridos por favor!");
     } else {
@@ -53,4 +58,41 @@ function limpiarCampos() {
     document.getElementById("cbxEspecialidad").value = "Matemàtica";
     document.getElementById("txtExperiencia").value = "0";
     document.getElementById("txtUrl").value = "";
+}
+
+function actionExec(parame) {
+    switch (parame) {
+        case 1:
+            // Subir e un 10%
+            alert("Subir Indice en 10%");
+            break;
+        
+        case 2:
+            // Bajar e un 10%
+            alert("Bajar Indice 10%");
+            break;
+
+        case 3:
+            if(confirm("¿Está seguro en eliminar esta fila?")){
+                eliminarFila();
+                limpiarCampos()
+            }
+            break;
+
+        case 4:
+            // Enviar Validaciòn
+            alert("");
+            break;
+
+        default:
+            alert("PRESIONO VER");
+            break;
+    }
+}
+
+function eliminarFila() {
+    var td = event.target.parentNode; 
+    var tr = td.parentNode;
+    var index = Array.from(tr.parentNode.children).indexOf(tr);
+    tr.parentNode.removeChild(tr);
 }
